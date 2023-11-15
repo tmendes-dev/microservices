@@ -9,7 +9,7 @@ namespace ProductService.Models
 
         }
 
-        public Product(int id, int stock, string name, string description, decimal price, DateTime createdTime)
+        public Product(int id, int stock, string name, string description, double price, DateTime createdTime)
         {
             ProductId = id;
             Stock = stock;
@@ -20,13 +20,13 @@ namespace ProductService.Models
             Status = CalculateStatus(stock);
         }
 
-        public Product(int productId, int stock, string name, string description, decimal price, DateTime createdTime, ProductStatus status) : this(productId, stock, name, description, price, createdTime) => Status = status;
+        public Product(int productId, int stock, string name, string description, double price, DateTime createdTime, ProductStatus status) : this(productId, stock, name, description, price, createdTime) => Status = status;
 
         public int ProductId { get; set; }
         public int Stock { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public decimal Price { get; set; } = decimal.Zero;
+        public double Price { get; set; } 
         public DateTime CreatedTime { get; set; }
         public ProductStatus Status { get; set; }
 

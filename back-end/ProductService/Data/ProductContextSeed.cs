@@ -1,5 +1,4 @@
-﻿using ProductService.Enums;
-using ProductService.Models;
+﻿using ProductService.Models;
 
 namespace ProductService.Data
 {
